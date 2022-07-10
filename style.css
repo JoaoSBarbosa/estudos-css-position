@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin: 0px;
+  background-color: #f7f7f7;
+  /* por ser um projeto pequeno, a definição de grid foi feita no próprio body*/
+  display: grid;
+  gap: 60px;
+  justify-items: center;
+  margin-top: 60px;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+
+/* reset para essas tags*/
+p, h1,h2,h3 {
+  margin: 0px;
+}
+p {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* manter o menu sempre alinhado ao centro mesmo quando quebra*/
+}
+.menu a {
+  background-color: #ffff;
+  padding: 15px 30px;
+  border-radius: 4px;
+  color: black;
+  text-transform: uppercase; /*coloca tudo em letra maiúscula*/
+}
+.conteudo {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px; /*tamanho máximo da tela para os conteúdos dentro da div*/
+ 
+}
+.introducao {
+  background-color: #fff;
+  text-align: right;
+  padding: 40px;
+  position: relative; /* para permitir que o objeto seja definido sobre a posição dessa div*/
+  display: grid;
+  gap: 20px;
+  align-content: center; /* mantem o conteúdo alinhado ao centro*/
+  justify-items: end; /* mantem os itens alinhados na direita*/
+  
+}
+/* detalhe vermelho entre a imagem e o texto*/
+.detalhe {
+  width: 60px;
+  height: 4px;
+  background-color: #e21;
+  display: inline-block; /* span não consegue definir tamanho ou largura, então para aparecer as estilizações é preciso definir como display bloc inline*/
+  position: absolute; /* o posicionamento absoluto será sempre em relação ao body, para corrigir isso, o div pai foi definido como posição relativa*/
+  top: 30px;
+  right: -30px;
+  
+}
+
+.btn {
+  background-color: #e21;
+  color: #fff;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 15px 30px;
+  text-transform: uppercase;
+}
+.subtitulo {
+  font-size: 64px;
+  text-align: right;
+  padding: 40px;
+  align-self: center; /* alinha só um item específico ao centro na vertical- align-self fala com o item específico dentro da grid*/
+  color: #c6c6c6;
+}
+.vantagens {
+  padding: 40px;
+  background-color: #fff;
+  position: relative;
+  
+}
+.vantagens-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px; /* o primeiro valor é da linha e o segundo da coluna*/
+ padding: 20px;
+}
+.vantagens-item p {
+  grid-column: 2;
+}
+.vantagens-item h3 {
+  font-weight: bolder;
+}
+
+.rodape {
+  background-color: #fff;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
